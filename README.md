@@ -1,7 +1,7 @@
 # ReCapProject
 Araç Kiralama Projesi
 
-##Proje Detayları
+## Proje Detayları
 Yepyeni bir proje oluşturunuz. Adı **ReCapProject** olacak.
 
 **Entities**, **DataAccess**, **Business** ve **Console** **katmanlarını** oluşturunuz.
