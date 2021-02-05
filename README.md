@@ -39,4 +39,28 @@ Araba Kiralama projemiz üzerinde çalışmaya devam edeceğiz.
 
   2.Araba günlük fiyatı 0'dan büyük olmalıdır.
   
+###### Veritabanı İşlemleri
+**Entity Framework:** .Net platformunda ORM(Object Relational Mapping) araçlarından birisidir. ORM (Object Relational Mapping) ise veritabanı ile nesneye yönelik programlama (OOP) arasındaki ilişkiyi kuran teknolojidir. Yani Entity Framework, nesne tabanlı programlamada veritabanındaki tablolara uygun nesneler oluşturma tekniğidir.
+Entity Framework ile 3 farklı yöntem ile proje geliştirilebilir. Bu yöntemler;
+- Model First (New Database)
+- Database First (Existing Database)
+- Code First (New Database)
 
+Biz bu yöntemlerden **Code First** ile ilgileneceğiz.
+Code First, adından da anlaşılacağı üzere kod ile veritabanı ve entity modeli tasarlama yaklaşımıdır. 
+Yapmanız gereken tek şey kodlarla entity classlarını tanımlamak olacaktır.
+
+DataAccess Class Library(.Net Standard) projesine sağ tıklayıp **Manage Nuget Packages**  diyoruz **Browse** da **Microsoft.EntityFrameworkCore.SqlServer** 3.1.11 versiyonu ve **Microsoft.EntityFrameworkCore.Tools** 3.1.11 versiyonlarını indiyoruz
+
+ConsoleUI Class Library(.Net Standart) projesine sağ tıklayıp **Manage Nuget Packages** diyoruz **Browse** da **Microsoft.EntityFrameworkCore.Design** 3.1.11 veriyonunu indiriyoruz
+
+**Tools->Manage Nuget Packages->Package Manager Console** açıyoruz ve
+'''
+Add-Migration RentaCar
+'''
+RentaCar veritabanı ismimi RentaCar yerine başka isimler verebilirsiniz
+
+'''
+update-database
+''' 
+ile veritabanımızı güncelliyoruz
