@@ -23,7 +23,7 @@ Araba Kiralama projemiz üzerinde çalışmaya devam edeceğiz.
 
   1.Brand-->Id,Name
 
-  1.Color-->Id,Name
+  2.Color-->Id,Name
 
 - Sql Server tarafında yeni bir veritabanı kurunuz. **Cars**,**Brands**,**Colors** tablolarını oluşturunuz. (Araştırma)
 
@@ -37,6 +37,6 @@ Araba Kiralama projemiz üzerinde çalışmaya devam edeceğiz.
 
   1.Araba ismi minimum 2 karakter olmalıdır
 
-  1.Araba günlük fiyatı 0'dan büyük olmalıdır.
+  2.Araba günlük fiyatı 0'dan büyük olmalıdır.
   
 
