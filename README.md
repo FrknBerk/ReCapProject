@@ -21,9 +21,9 @@ Araba Kiralama projemiz üzerinde çalışmaya devam edeceğiz.
 
 - **Brand** ve **Color** nesneleri ekleyiniz(Entity)
 
-  -Brand-->Id,Name
+  1.Brand-->Id,Name
 
-  -Color-->Id,Name
+  1.Color-->Id,Name
 
 - Sql Server tarafında yeni bir veritabanı kurunuz. **Cars**,**Brands**,**Colors** tablolarını oluşturunuz. (Araştırma)
 
@@ -35,8 +35,8 @@ Araba Kiralama projemiz üzerinde çalışmaya devam edeceğiz.
 
 - Sisteme yeni araba eklendiğinde aşağıdaki kuralları çalıştırınız.
 
-  -Araba ismi minimum 2 karakter olmalıdır
+  1.Araba ismi minimum 2 karakter olmalıdır
 
-  -Araba günlük fiyatı 0'dan büyük olmalıdır.
+  1.Araba günlük fiyatı 0'dan büyük olmalıdır.
   
 
