@@ -55,12 +55,12 @@ DataAccess Class Library(.Net Standard) projesine sağ tıklayıp **Manage Nuget
 ConsoleUI Class Library(.Net Standart) projesine sağ tıklayıp **Manage Nuget Packages** diyoruz **Browse** da **Microsoft.EntityFrameworkCore.Design** 3.1.11 veriyonunu indiriyoruz
 
 **Tools->Manage Nuget Packages->Package Manager Console** açıyoruz ve
-'''
+```
 Add-Migration RentaCar
-'''
+```
 RentaCar veritabanı ismimi RentaCar yerine başka isimler verebilirsiniz
 
-'''
+```
 update-database
-''' 
+``` 
 ile veritabanımızı güncelliyoruz
