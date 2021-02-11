@@ -14,7 +14,9 @@ namespace Entities.Concrete
         public int ColorId { get; set; }
         public int ModelYear { get; set; }
         public decimal DailyPrice { get; set; }
+        [StringLength(50)]
         public string Description { get; set; }
+        public bool State { get; set; }
 
         public virtual Brand Brand { get; set; }
         //Her Cars(Araba) ın bir Brand(Marka) olacaktır.Cars class ile Brand class arasında ilişki kuruyoruz. Brand isimli bir class oluşturuyoruz.

@@ -10,7 +10,9 @@ namespace Entities.Concrete
     {
         [Key]
         public int ColorId { get; set; }
+        [StringLength(50)]
         public string ColorName { get; set; }
+        public bool State { get; set; }
         public virtual List<Car> Cars { get; set; }
         ////Color(Renk) ile Cars(Araba) arasında bire çok ilişki var. Bu sebeple Color class ımıza Cars isimli property List olarak tanımlarız 
     }
