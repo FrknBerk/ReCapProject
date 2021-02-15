@@ -7,11 +7,13 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-    public class Brand:IEntity
+    public class User : IEntity
     {
-        //MODEL ADINDA BİR TABLO OLUŞTURUP BRAND IN MODELLERİ OLACAK CAR TABLOSUNDA MODEL OLACAK
-        public int BrandId { get; set; }
-        public string BrandName { get; set; }
+        public int UserId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
         public bool GetState { get; set; }
     }
 }

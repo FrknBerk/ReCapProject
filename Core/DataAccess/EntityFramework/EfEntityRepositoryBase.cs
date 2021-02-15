@@ -8,15 +8,14 @@ using System.Text;
 
 namespace Core.DataAccess.EntityFramework
 {
-    public class EfEntityRepositoryBase<TEntity,TContext> 
-        where TEntity:class,IEntity,new()
-        where TContext:DbContext,new()
+    public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity>
+        where TEntity : class, IEntity, new()
+        where TContext : DbContext, new()
     {
         public void Add(TEntity entity)
         {
             using (TContext context = new TContext())
             {
-
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
                 context.SaveChanges();
@@ -29,7 +28,7 @@ namespace Core.DataAccess.EntityFramework
             using (TContext context = new TContext())
             {
                 var deletedEntity = context.Entry(entity);
-                deletedEntity.State = EntityState.Deleted;
+                deletedEntity.State = EntityState.Modified;
                 context.SaveChanges();
             }
         }
@@ -41,7 +40,7 @@ namespace Core.DataAccess.EntityFramework
                 return filter == null ? context.Set<TEntity>().ToList() : context.Set<TEntity>().Where(filter).ToList();
             }
         }
-        public TEntity GetById(Expression<Func<TEntity,bool>> filter)
+        public TEntity GetById(Expression<Func<TEntity, bool>> filter)
         {
             using (TContext context = new TContext())
             {

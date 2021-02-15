@@ -2,18 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Entities.Concrete
 {
     public class Color:IEntity
     {
-        [Key]
         public int ColorId { get; set; }
-        [StringLength(50)]
         public string ColorName { get; set; }
-        public bool State { get; set; }
-        public virtual List<Car> Cars { get; set; }
-        ////Color(Renk) ile Cars(Araba) arasında bire çok ilişki var. Bu sebeple Color class ımıza Cars isimli property List olarak tanımlarız 
+        public bool GetState { get; set; }
     }
 }

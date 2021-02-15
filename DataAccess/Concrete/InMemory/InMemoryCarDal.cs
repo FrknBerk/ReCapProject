@@ -18,10 +18,10 @@ namespace DataAccess.Concrete.InMemory
             {
                 new Car
                 {
-                    Id=1,
+                    CarId=1,
                     BrandId=1,
                     ColorId=1,
-                    ModelYear=2018,
+                    ModelYear="2018",
                     DailyPrice=100,
                     Description="Kiralık",
                 }
@@ -35,7 +35,7 @@ namespace DataAccess.Concrete.InMemory
 
         public void Delete(Car car)
         {
-            Car carToDelete = _cars.SingleOrDefault(c => c.Id == car.Id);
+            Car carToDelete = _cars.SingleOrDefault(c => c.CarId == car.CarId);
             _cars.Remove(carToDelete);
         }
 
@@ -61,7 +61,7 @@ namespace DataAccess.Concrete.InMemory
 
         public void Update(Car car)
         {
-            Car carToUpdate = _cars.SingleOrDefault(c => c.Id == car.Id);
+            Car carToUpdate = _cars.SingleOrDefault(c => c.CarId == car.CarId);
             carToUpdate.BrandId = car.BrandId;
             carToUpdate.ColorId = car.ColorId;
             carToUpdate.ModelYear = car.ModelYear;

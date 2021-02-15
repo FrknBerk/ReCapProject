@@ -7,11 +7,13 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-    public class Brand:IEntity
+    public class Rental : IEntity
     {
-        //MODEL ADINDA BİR TABLO OLUŞTURUP BRAND IN MODELLERİ OLACAK CAR TABLOSUNDA MODEL OLACAK
-        public int BrandId { get; set; }
-        public string BrandName { get; set; }
+        public int Id { get; set; }
+        public int CarId { get; set; }
+        public int CustomerId { get; set; }
+        public DateTime RentDate { get; set; }
+        public DateTime? ReturnDate { get; set; }
         public bool GetState { get; set; }
     }
 }
