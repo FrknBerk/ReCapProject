@@ -1,0 +1,16 @@
+﻿using Entities.Concrete;
+using FluentValidation;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Business.ValidationRules.FluentValidation
+{
+    public class BrandValidator : AbstractValidator<Brand>
+    {
+        public BrandValidator()
+        {
+            RuleFor(b => b.BrandName).Length(2, 50).WithMessage("Maksimum 50 karakter uzunluğunda olmalı");
+        }
+    }
+}
