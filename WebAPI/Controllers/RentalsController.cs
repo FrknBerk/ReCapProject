@@ -22,7 +22,7 @@ namespace WebAPI.Controllers
         public IActionResult GetAll()
         {
             var result = _rentalService.GetAll();
-            if (result.Success ==true)
+            if (result.Success == true)
             {
                 return Ok(result);
             }
@@ -32,7 +32,7 @@ namespace WebAPI.Controllers
         public IActionResult RentCarId(int carId)
         {
             var result = _rentalService.RentCarId(carId);
-            if (result.Success==true)
+            if (result.Success == true)
             {
                 return Ok(result);
             }
@@ -43,7 +43,7 @@ namespace WebAPI.Controllers
         public IActionResult Add(Rental rental)
         {
             var result = _rentalService.RentAdd(rental);
-            if (result.Success==true)
+            if (result.Success == true)
             {
                 return Ok(result);
             }
@@ -53,7 +53,7 @@ namespace WebAPI.Controllers
         public IActionResult Delete(Rental rental)
         {
             var result = _rentalService.Delete(rental);
-            if (result.Success==true)
+            if (result.Success == true)
             {
                 return Ok(result);
             }
@@ -63,11 +63,24 @@ namespace WebAPI.Controllers
         public IActionResult Update(Rental rental)
         {
             var result = _rentalService.Update(rental);
-            if (result.Success==true)
+            if (result.Success == true)
             {
                 return Ok(result);
             }
             return BadRequest(result);
         }
+
+        [HttpGet("getrentalcardetails")]
+        public IActionResult GetRentalCarDetails()
+        {
+            var result = _rentalService.GetRentalCarDetails();
+            if (result.Success == true)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        
     }
 }

@@ -13,6 +13,8 @@ namespace Business.Abstract
         IResult RentAdd(Rental rental);//Araç kiralama
         IResult Update(Rental rental);
         IResult Delete(Rental rental);
+
         IDataResult<List<Rental>> GetAll();
+        IDataResult<List<RentalCarDetailDto>> GetRentalCarDetails();
     }
 }
